@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kế Hoạch Đào Tạo Nội Bộ – Phòng Cơ Điện 2025</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&family=Barlow+Condensed:wght@600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #CC1B2B;
+    --red-dark: #9E1020;
+    --red-light: #F5E0E2;
+    --dark: #111214;
+    --dark2: #1C1E22;
+    --gray: #F4F4F6;
+    --gray2: #E8E9ED;
+    --text: #1A1C20;
+    --text-muted: #6B7280;
+    --white: #FFFFFF;
+    --border: rgba(0,0,0,0.08);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    color: var(--text);
+    background: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(17,18,20,0.95);
+    backdrop-filter: blur(12px);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 5%;
+    height: 64px;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+  .nav-brand {
+    display: flex; align-items: center; gap: 12px;
+  }
+  .nav-logo {
+    width: 32px; height: 32px;
+    background: var(--red);
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 6px;
+    font-weight: 900; font-size: 14px; color: #fff;
+    letter-spacing: -0.5px;
+  }
+  .nav-name {
+    font-size: 13px; color: rgba(255,255,255,0.55);
+    font-weight: 500; letter-spacing: 0.3px;
+    line-height: 1.3;
+  }
+  .nav-name strong {
+    display: block; color: #fff; font-size: 14px; font-weight: 700;
+  }
+  .nav-badge {
+    background: rgba(204,27,43,0.15);
+    border: 1px solid rgba(204,27,43,0.35);
+    color: #FF6B7A;
+    font-size: 11px; font-weight: 700;
+    padding: 4px 10px; border-radius: 100px;
+    letter-spacing: 0.5px;
+  }
+
+  /* HERO */
+  .hero {
+    background: var(--dark);
+    padding: 130px 5% 90px;
+    position: relative;
+    overflow: hidden;
+    min-height: 92vh;
+    display: flex; align-items: center;
+  }
+  .hero-grid-bg {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(204,27,43,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(204,27,43,0.04) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+  .hero-glow {
+    position: absolute; top: -120px; right: -80px;
+    width: 640px; height: 640px;
+    background: radial-gradient(circle, rgba(204,27,43,0.18) 0%, transparent 65%);
+    pointer-events: none;
+  }
+  .hero-inner {
+    position: relative; z-index: 1;
+    display: grid; grid-template-columns: 1fr 420px;
+    gap: 64px; align-items: center;
+    max-width: 1200px; margin: 0 auto; width: 100%;
+  }
+  .hero-tag {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(204,27,43,0.12);
+    border: 1px solid rgba(204,27,43,0.3);
+    color: #FF8089;
+    font-size: 12px; font-weight: 700;
+    padding: 6px 14px; border-radius: 100px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+  }
+  .hero-tag span { width: 6px; height: 6px; background: #FF4455; border-radius: 50%; animation: pulse 1.8s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+  .hero h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(42px, 6vw, 76px);
+    font-weight: 900;
+    color: #fff;
+    line-height: 0.95;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .hero h1 .red { color: var(--red); }
+  .hero-subtitle {
+    font-size: 16px; color: rgba(255,255,255,0.5);
+    font-weight: 400; margin-top: 20px; margin-bottom: 36px;
+    line-height: 1.7; max-width: 520px;
+  }
+  .hero-stats {
+    display: flex; gap: 28px; flex-wrap: wrap;
+  }
+  .stat {
+    display: flex; flex-direction: column; gap: 4px;
+  }
+  .stat-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 40px; font-weight: 900; color: #fff;
+    line-height: 1;
+  }
+  .stat-num .red { color: var(--red); }
+  .stat-label {
+    font-size: 12px; color: rgba(255,255,255,0.4);
+    font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase;
+  }
+  .stat-divider { width: 1px; background: rgba(255,255,255,0.1); align-self: stretch; }
+
+  /* Hero card */
+  .hero-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.09);
+    border-radius: 16px; padding: 28px;
+    backdrop-filter: blur(10px);
+  }
+  .hero-card-header {
+    font-size: 11px; font-weight: 700; letter-spacing: 1.5px;
+    color: rgba(255,255,255,0.35); text-transform: uppercase;
+    margin-bottom: 20px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .hero-card-header span {
+    background: rgba(204,27,43,0.2); border: 1px solid rgba(204,27,43,0.3);
+    color: #FF6B7A; padding: 3px 8px; border-radius: 4px;
+    font-size: 10px;
+  }
+  .hero-module {
+    display: flex; gap: 12px; align-items: flex-start;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .hero-module:last-child { border-bottom: none; padding-bottom: 0; }
+  .hero-module:first-child { padding-top: 0; }
+  .module-icon {
+    width: 36px; height: 36px; min-width: 36px;
+    background: rgba(204,27,43,0.15);
+    border: 1px solid rgba(204,27,43,0.25);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+  }
+  .module-info { flex: 1; }
+  .module-name {
+    font-size: 13px; font-weight: 700; color: #fff;
+    margin-bottom: 2px;
+  }
+  .module-meta {
+    font-size: 11px; color: rgba(255,255,255,0.35);
+    font-weight: 500;
+  }
+  .module-time {
+    font-size: 11px; font-weight: 700;
+    color: rgba(204,27,43,0.8);
+    background: rgba(204,27,43,0.1);
+    padding: 3px 8px; border-radius: 4px;
+    white-space: nowrap; align-self: center;
+  }
+
+  /* SECTION BASE */
+  section { padding: 96px 5%; }
+  .section-inner { max-width: 1200px; margin: 0 auto; }
+  .section-tag {
+    font-size: 11px; font-weight: 800; letter-spacing: 2px;
+    color: var(--red); text-transform: uppercase;
+    margin-bottom: 14px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .section-tag::after {
+    content: ''; flex: 1; max-width: 48px; height: 2px; background: var(--red); border-radius: 2px;
+  }
+  .section-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(34px, 4.5vw, 52px);
+    font-weight: 900; line-height: 1.0;
+    text-transform: uppercase; letter-spacing: -0.5px;
+    color: var(--text);
+  }
+  .section-title .red { color: var(--red); }
+
+  /* OVERVIEW SECTION */
+  .overview { background: var(--gray); }
+  .overview-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 20px; margin-top: 56px;
+  }
+  .overview-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px; padding: 32px 28px;
+    position: relative; overflow: hidden;
+  }
+  .overview-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 3px; background: var(--red);
+  }
+  .ov-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 52px; font-weight: 900; line-height: 1;
+    color: var(--red); margin-bottom: 6px;
+  }
+  .ov-icon-row {
+    font-size: 28px; margin-bottom: 16px;
+  }
+  .ov-title {
+    font-size: 16px; font-weight: 800; color: var(--text);
+    margin-bottom: 14px; text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .ov-list {
+    list-style: none; display: flex; flex-direction: column; gap: 8px;
+  }
+  .ov-list li {
+    font-size: 13.5px; color: var(--text-muted); line-height: 1.5;
+    display: flex; gap: 8px; align-items: flex-start;
+  }
+  .ov-list li::before {
+    content: '→'; color: var(--red); font-weight: 700; flex-shrink: 0;
+  }
+
+  /* CURRICULUM SECTION */
+  .curriculum { background: var(--white); }
+  .curriculum-header {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    margin-bottom: 56px; gap: 24px;
+  }
+  .curriculum-note {
+    font-size: 14px; color: var(--text-muted);
+    background: var(--red-light);
+    border: 1px solid rgba(204,27,43,0.15);
+    border-radius: 8px; padding: 10px 16px;
+    font-weight: 600; color: var(--red-dark);
+    white-space: nowrap;
+  }
+  .subject-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .subject-card {
+    border: 1px solid var(--border);
+    border-radius: 14px; padding: 24px;
+    transition: all 0.2s ease;
+    cursor: default;
+    position: relative; overflow: hidden;
+  }
+  .subject-card:hover {
+    border-color: rgba(204,27,43,0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(204,27,43,0.08);
+  }
+  .subject-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 64px; font-weight: 900;
+    color: rgba(204,27,43,0.07); line-height: 1;
+    position: absolute; top: 12px; right: 16px;
+  }
+  .subject-icon { font-size: 32px; margin-bottom: 16px; }
+  .subject-name {
+    font-size: 16px; font-weight: 800; color: var(--text);
+    margin-bottom: 8px; text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+  .subject-desc {
+    font-size: 13px; color: var(--text-muted);
+    line-height: 1.6; margin-bottom: 16px;
+  }
+  .subject-footer {
+    display: flex; gap: 8px; flex-wrap: wrap;
+  }
+  .tag {
+    font-size: 11px; font-weight: 700;
+    padding: 4px 10px; border-radius: 100px;
+    letter-spacing: 0.3px;
+  }
+  .tag-red {
+    background: rgba(204,27,43,0.09);
+    color: var(--red-dark);
+  }
+  .tag-dark {
+    background: var(--gray2);
+    color: var(--text-muted);
+  }
+
+  /* TIMELINE SECTION */
+  .timeline-section { background: var(--dark); padding: 96px 5%; }
+  .timeline-section .section-title { color: #fff; }
+  .timeline-section .section-tag { color: #FF6B7A; }
+  .timeline-section .section-tag::after { background: #FF6B7A; }
+  .timeline-wrap {
+    margin-top: 56px; position: relative;
+  }
+  .timeline-line {
+    position: absolute; top: 28px; left: 0; right: 0; height: 2px;
+    background: rgba(255,255,255,0.08);
+  }
+  .timeline-line-fill {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(90deg, var(--red), rgba(204,27,43,0.3));
+  }
+  .timeline-months {
+    display: grid; grid-template-columns: repeat(6, 1fr);
+    gap: 0; position: relative;
+  }
+  .tl-month {
+    display: flex; flex-direction: column; align-items: center;
+    padding: 0 8px;
+  }
+  .tl-dot {
+    width: 14px; height: 14px; border-radius: 50%;
+    background: var(--red); border: 3px solid var(--dark);
+    box-shadow: 0 0 0 3px rgba(204,27,43,0.3);
+    position: relative; z-index: 1; margin-bottom: 20px;
+  }
+  .tl-month-label {
+    font-size: 12px; font-weight: 800; color: rgba(255,255,255,0.35);
+    text-transform: uppercase; letter-spacing: 1px;
+    margin-bottom: 14px;
+  }
+  .tl-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px; padding: 16px;
+    width: 100%;
+  }
+  .tl-card-icon { font-size: 22px; margin-bottom: 10px; }
+  .tl-card-name {
+    font-size: 13px; font-weight: 800; color: #fff;
+    text-transform: uppercase; letter-spacing: 0.3px;
+    margin-bottom: 6px;
+  }
+  .tl-card-person {
+    font-size: 11px; color: rgba(255,255,255,0.4);
+    line-height: 1.5;
+  }
+  .tl-card-hours {
+    display: inline-block; margin-top: 10px;
+    background: rgba(204,27,43,0.2);
+    border: 1px solid rgba(204,27,43,0.3);
+    color: #FF8089; font-size: 11px; font-weight: 800;
+    padding: 3px 10px; border-radius: 100px;
+  }
+  .timeline-total {
+    margin-top: 48px;
+    display: flex; gap: 0;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px; overflow: hidden;
+  }
+  .tl-total-item {
+    flex: 1; padding: 24px;
+    display: flex; flex-direction: column; gap: 6px;
+    border-right: 1px solid rgba(255,255,255,0.08);
+  }
+  .tl-total-item:last-child { border-right: none; }
+  .tl-total-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 42px; font-weight: 900; color: #fff; line-height: 1;
+  }
+  .tl-total-num span { color: var(--red); }
+  .tl-total-label {
+    font-size: 12px; color: rgba(255,255,255,0.4);
+    text-transform: uppercase; letter-spacing: 0.8px; font-weight: 600;
+  }
+
+  /* ASSESSMENT SECTION */
+  .assessment { background: var(--white); }
+  .assessment-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 24px; margin-top: 56px;
+  }
+  .assess-card {
+    border: 1px solid var(--border);
+    border-radius: 16px; padding: 32px;
+  }
+  .assess-card-title {
+    display: flex; align-items: center; gap: 12px;
+    font-size: 14px; font-weight: 800; text-transform: uppercase;
+    letter-spacing: 0.5px; color: var(--text);
+    margin-bottom: 20px;
+  }
+  .assess-icon {
+    width: 40px; height: 40px;
+    background: var(--gray); border-radius: 10px;
+    display: flex; align-items: center; justify-content: center; font-size: 20px;
+  }
+  .assess-item {
+    display: flex; gap: 12px; align-items: flex-start;
+    padding: 12px 0; border-bottom: 1px solid var(--border);
+  }
+  .assess-item:last-child { border-bottom: none; }
+  .assess-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--red); margin-top: 5px; flex-shrink: 0; }
+  .assess-text { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+
+  .score-cards { display: flex; flex-direction: column; gap: 12px; margin-top: 0; }
+  .score-card {
+    border-radius: 12px; padding: 20px 24px;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .score-card.pass {
+    background: rgba(16,185,129,0.06);
+    border: 1px solid rgba(16,185,129,0.2);
+  }
+  .score-card.fail {
+    background: rgba(204,27,43,0.05);
+    border: 1px solid rgba(204,27,43,0.18);
+  }
+  .score-mark {
+    font-size: 28px; flex-shrink: 0;
+  }
+  .score-label {
+    font-size: 14px; font-weight: 700;
+    margin-bottom: 2px;
+  }
+  .score-card.pass .score-label { color: #059669; }
+  .score-card.fail .score-label { color: var(--red-dark); }
+  .score-desc { font-size: 12px; color: var(--text-muted); }
+
+  /* ORGANIZATION SECTION */
+  .org-section { background: var(--gray); }
+  .org-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 24px; margin-top: 56px;
+  }
+  .org-main-card {
+    background: var(--dark);
+    border-radius: 16px; padding: 36px;
+    color: #fff;
+  }
+  .org-main-title {
+    font-size: 13px; font-weight: 800; letter-spacing: 1.5px;
+    text-transform: uppercase; color: rgba(255,255,255,0.4);
+    margin-bottom: 20px;
+  }
+  .org-check {
+    display: flex; gap: 12px; align-items: flex-start;
+    padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+  .org-check:last-child { border-bottom: none; }
+  .check-icon {
+    width: 22px; height: 22px; border-radius: 50%;
+    background: rgba(204,27,43,0.25);
+    display: flex; align-items: center; justify-content: center;
+    color: #FF6B7A; font-size: 12px; font-weight: 900;
+    flex-shrink: 0; margin-top: 1px;
+  }
+  .org-check-text { font-size: 14px; color: rgba(255,255,255,0.7); line-height: 1.5; }
+
+  .org-side { display: flex; flex-direction: column; gap: 16px; }
+  .org-side-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px; padding: 24px;
+    flex: 1;
+  }
+  .org-side-title {
+    font-size: 13px; font-weight: 800; letter-spacing: 1px;
+    text-transform: uppercase; color: var(--red);
+    margin-bottom: 14px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .org-side-item {
+    font-size: 13px; color: var(--text-muted);
+    padding: 6px 0; border-bottom: 1px solid var(--border);
+    line-height: 1.5;
+  }
+  .org-side-item:last-child { border-bottom: none; }
+
+  /* CTA SECTION */
+  .cta-section {
+    background: var(--dark);
+    padding: 96px 5%;
+    text-align: center;
+    position: relative; overflow: hidden;
+  }
+  .cta-glow {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+    width: 800px; height: 400px;
+    background: radial-gradient(ellipse, rgba(204,27,43,0.15) 0%, transparent 65%);
+    pointer-events: none;
+  }
+  .cta-inner { position: relative; z-index: 1; max-width: 680px; margin: 0 auto; }
+  .cta-tag {
+    display: inline-block;
+    font-size: 11px; font-weight: 800; letter-spacing: 2px;
+    color: #FF8089; text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .cta-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(40px, 6vw, 72px); font-weight: 900;
+    color: #fff; text-transform: uppercase;
+    line-height: 0.95; margin-bottom: 20px;
+    letter-spacing: -1px;
+  }
+  .cta-title span { color: var(--red); }
+  .cta-sub {
+    font-size: 16px; color: rgba(255,255,255,0.45);
+    line-height: 1.7; margin-bottom: 40px;
+  }
+  .cta-btn {
+    display: inline-block;
+    background: var(--red);
+    color: #fff; font-size: 14px; font-weight: 800;
+    padding: 16px 40px; border-radius: 100px;
+    text-decoration: none; letter-spacing: 0.8px;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+  }
+  .cta-btn:hover { background: var(--red-dark); transform: translateY(-2px); box-shadow: 0 12px 32px rgba(204,27,43,0.3); }
+
+  /* FOOTER */
+  footer {
+    background: #0A0B0C;
+    padding: 32px 5%;
+    display: flex; align-items: center; justify-content: space-between;
+    border-top: 1px solid rgba(255,255,255,0.05);
+  }
+  .footer-left {
+    font-size: 12px; color: rgba(255,255,255,0.25);
+    line-height: 1.6;
+  }
+  .footer-left strong { color: rgba(255,255,255,0.5); font-weight: 700; }
+  .footer-right {
+    display: flex; gap: 8px;
+  }
+  .footer-badge {
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.3); font-size: 11px; font-weight: 600;
+    padding: 6px 14px; border-radius: 100px;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero-card { display: none; }
+    .overview-grid { grid-template-columns: 1fr; }
+    .subject-grid { grid-template-columns: 1fr 1fr; }
+    .timeline-months { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .timeline-line { display: none; }
+    .tl-dot { display: none; }
+    .assessment-grid { grid-template-columns: 1fr; }
+    .org-grid { grid-template-columns: 1fr; }
+    .timeline-total { flex-wrap: wrap; }
+    .tl-total-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  }
+  @media (max-width: 600px) {
+    section { padding: 64px 5%; }
+    .subject-grid { grid-template-columns: 1fr; }
+    .timeline-months { grid-template-columns: repeat(2, 1fr); }
+    .hero { padding: 100px 5% 64px; }
+    footer { flex-direction: column; gap: 16px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">
+    <div class="nav-logo">VN</div>
+    <div class="nav-name">
+      <strong>Viettel Networks</strong>
+      Trung Tâm Kỹ Thuật Khu Vực 3
+    </div>
+  </div>
+  <div class="nav-badge">Nội Bộ · 2025</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-tag">
+        <span></span>
+        Phê duyệt · Phó Giám Đốc TTKTKV3
+      </div>
+      <h1>Kế Hoạch<br>Đào Tạo<br><span class="red">Nội Bộ</span></h1>
+      <p class="hero-subtitle">
+        Phòng Cơ Điện – Trung Tâm Kỹ Thuật Khu Vực 3<br>
+        Củng cố kiến thức · Nâng cao năng lực vận hành khai thác<br>
+        Năm 2025
+      </p>
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-num"><span class="red">6</span></div>
+          <div class="stat-label">Chủ đề</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <div class="stat-num"><span class="red">48</span></div>
+          <div class="stat-label">Giờ đào tạo</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <div class="stat-num"><span class="red">15</span></div>
+          <div class="stat-label">Học viên</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <div class="stat-num"><span class="red">6</span></div>
+          <div class="stat-label">Tháng</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <div class="hero-card-header">
+        Lịch trình đào tạo
+        <span>T6–T11/2025</span>
+      </div>
+      <div class="hero-module">
+        <div class="module-icon">⚡</div>
+        <div class="module-info">
+          <div class="module-name">Hệ thống điện AC</div>
+          <div class="module-meta">Trần Quốc Cường (067392)</div>
+        </div>
+        <div class="module-time">Tháng 6</div>
+      </div>
+      <div class="hero-module">
+        <div class="module-icon">🔋</div>
+        <div class="module-info">
+          <div class="module-name">Ắc quy</div>
+          <div class="module-meta">Trần Thanh Quang (070992)</div>
+        </div>
+        <div class="module-time">Tháng 7</div>
+      </div>
+      <div class="hero-module">
+        <div class="module-icon">🔥</div>
+        <div class="module-info">
+          <div class="module-name">Phòng cháy chữa cháy</div>
+          <div class="module-meta">Đoàn Minh Quốc (074273)</div>
+        </div>
+        <div class="module-time">Tháng 8</div>
+      </div>
+      <div class="hero-module">
+        <div class="module-icon">🤖</div>
+        <div class="module-info">
+          <div class="module-name">Công nghệ mới</div>
+          <div class="module-meta">Phạm Quốc Dũng (014191)</div>
+        </div>
+        <div class="module-time">Tháng 9</div>
+      </div>
+      <div class="hero-module">
+        <div class="module-icon">🔌</div>
+        <div class="module-info">
+          <div class="module-name">Tủ nguồn DC</div>
+          <div class="module-meta">Lê Minh Phương (011054)</div>
+        </div>
+        <div class="module-time">Tháng 10</div>
+      </div>
+      <div class="hero-module">
+        <div class="module-icon">☀️</div>
+        <div class="module-info">
+          <div class="module-name">Pin mặt trời</div>
+          <div class="module-meta">Trần Nguyễn Chí Bảo (439122)</div>
+        </div>
+        <div class="module-time">Tháng 11</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OVERVIEW SECTION -->
+<section class="overview">
+  <div class="section-inner">
+    <div class="section-tag">Tổng quan</div>
+    <h2 class="section-title">Mục Đích &amp;<br><span class="red">Đối Tượng Đào Tạo</span></h2>
+    <div class="overview-grid">
+      <div class="overview-card">
+        <div class="ov-icon-row">🎯</div>
+        <div class="ov-num">01</div>
+        <div class="ov-title">Mục đích</div>
+        <ul class="ov-list">
+          <li>Triển khai đào tạo theo khung đào tạo ngành cơ điện cho nhân sự tại Phòng Cơ điện</li>
+          <li>Căn cứ Kế hoạch số 100/KH-CĐ phê duyệt ngày 01/4/2025 về kế hoạch SXKD năm 2025</li>
+          <li>Cập nhật kiến thức chuyên môn – nâng cao năng lực vận hành khai thác cơ điện</li>
+        </ul>
+      </div>
+      <div class="overview-card">
+        <div class="ov-icon-row">👷</div>
+        <div class="ov-num">02</div>
+        <div class="ov-title">Đối tượng &amp; quy mô</div>
+        <ul class="ov-list">
+          <li>BO Cơ điện – Phòng Cơ điện đang chủ trì và tham gia các hoạt động vận hành khai thác cơ điện mảng truy nhập</li>
+          <li>Quân số dự kiến: 15 người đang tham gia hoạt động VHKT mảng truy nhập</li>
+        </ul>
+      </div>
+      <div class="overview-card">
+        <div class="ov-icon-row">🏫</div>
+        <div class="ov-num">03</div>
+        <div class="ov-title">Hình thức tổ chức</div>
+        <ul class="ov-list">
+          <li>Đào tạo nội bộ – Đào tạo tập trung</li>
+          <li>Địa điểm: Tòa nhà 285 CMTT</li>
+          <li>Giảng viên: Nhân sự chủ chốt BO thuộc Phòng Cơ điện, am hiểu thiết kế và vận hành khai thác cơ điện</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CURRICULUM SECTION -->
+<section class="curriculum">
+  <div class="section-inner">
+    <div class="curriculum-header">
+      <div>
+        <div class="section-tag">Nội dung học</div>
+        <h2 class="section-title">Chương Trình<br><span class="red">Đào Tạo</span></h2>
+      </div>
+      <div class="curriculum-note">Tổng: 6 chủ đề × 8 giờ = 48 giờ</div>
+    </div>
+    <div class="subject-grid">
+      <div class="subject-card">
+        <div class="subject-num">01</div>
+        <div class="subject-icon">⚡</div>
+        <div class="subject-name">Hệ thống điện AC</div>
+        <div class="subject-desc">Giới thiệu các loại thiết bị hệ thống AC. Cách đánh giá trạm điện yếu. Các phương án cải tạo điện.</div>
+        <div class="subject-footer">
+          <span class="tag tag-red">8 giờ</span>
+          <span class="tag tag-dark">Trần Quốc Cường</span>
+          <span class="tag tag-dark">Tháng 6/2025</span>
+        </div>
+      </div>
+      <div class="subject-card">
+        <div class="subject-num">02</div>
+        <div class="subject-icon">🔋</div>
+        <div class="subject-name">Ắc quy</div>
+        <div class="subject-desc">Hướng dẫn các loại ắc quy, quy định về test xả ắc quy. Hướng dẫn xử lý lỗi thường gặp khi test xả.</div>
+        <div class="subject-footer">
+          <span class="tag tag-red">8 giờ</span>
+          <span class="tag tag-dark">Trần Thanh Quang</span>
+          <span class="tag tag-dark">Tháng 7/2025</span>
+        </div>
+      </div>
+      <div class="subject-card">
+        <div class="subject-num">03</div>
+        <div class="subject-icon">🔥</div>
+        <div class="subject-name">Phòng cháy chữa cháy</div>
+        <div class="subject-desc">Giới thiệu quả cầu chữa cháy, tính năng và cách lắp đặt. Các trường hợp cần lưu ý khi lắp QCCC.</div>
+        <div class="subject-footer">
+          <span class="tag tag-red">8 giờ</span>
+          <span class="tag tag-dark">Đoàn Minh Quốc</span>
+          <span class="tag tag-dark">Tháng 8/2025</span>
+        </div>
+      </div>
+      <div class="subject-card">
+        <div class="subject-num">04</div>
+        <div class="subject-icon">🤖</div>
+        <div class="subject-name">Công nghệ mới</div>
+        <div class="subject-desc">Giới thiệu các công nghệ mới liên quan thiết bị cơ điện. Cập nhật xu hướng và ứng dụng thực tiễn.</div>
+        <div class="subject-footer">
+          <span class="tag tag-red">8 giờ</span>
+          <span class="tag tag-dark">Phạm Quốc Dũng</span>
+          <span class="tag tag-dark">Tháng 9/2025</span>
+        </div>
+      </div>
+      <div class="subject-card">
+        <div class="subject-num">05</div>
+        <div class="subject-icon">🔌</div>
+        <div class="subject-name">Tủ nguồn DC</div>
+        <div class="subject-desc">Hướng dẫn cách tính toán tủ quá tải REC, phương án xử lý trạm quá tải REC hiệu quả.</div>
+        <div class="subject-footer">
+          <span class="tag tag-red">8 giờ</span>
+          <span class="tag tag-dark">Lê Minh Phương</span>
+          <span class="tag tag-dark">Tháng 10/2025</span>
+        </div>
+      </div>
+      <div class="subject-card">
+        <div class="subject-num">06</div>
+        <div class="subject-icon">☀️</div>
+        <div class="subject-name">Pin mặt trời</div>
+        <div class="subject-desc">Giới thiệu các loại PMT. Giải pháp triển khai PMT cho trạm giá điện cao. Tối ưu vận hành.</div>
+        <div class="subject-footer">
+          <span class="tag tag-red">8 giờ</span>
+          <span class="tag tag-dark">Trần Nguyễn Chí Bảo</span>
+          <span class="tag tag-dark">Tháng 11/2025</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE SECTION -->
+<section class="timeline-section">
+  <div class="section-inner">
+    <div class="section-tag">Lịch trình</div>
+    <h2 class="section-title" style="color:#fff;">Lịch Trình Đào Tạo<br><span style="color:var(--red)">Theo Tháng</span></h2>
+    <div class="timeline-wrap">
+      <div class="timeline-line"><div class="timeline-line-fill"></div></div>
+      <div class="timeline-months">
+        <div class="tl-month">
+          <div class="tl-dot"></div>
+          <div class="tl-month-label">Tháng 6</div>
+          <div class="tl-card">
+            <div class="tl-card-icon">⚡</div>
+            <div class="tl-card-name">Hệ thống điện AC</div>
+            <div class="tl-card-person">Trần Quốc Cường<br>(067392) – P.CĐ</div>
+            <div class="tl-card-hours">8 giờ</div>
+          </div>
+        </div>
+        <div class="tl-month">
+          <div class="tl-dot"></div>
+          <div class="tl-month-label">Tháng 7</div>
+          <div class="tl-card">
+            <div class="tl-card-icon">🔋</div>
+            <div class="tl-card-name">Ắc quy</div>
+            <div class="tl-card-person">Trần Thanh Quang<br>(070992) – P.CĐ</div>
+            <div class="tl-card-hours">8 giờ</div>
+          </div>
+        </div>
+        <div class="tl-month">
+          <div class="tl-dot"></div>
+          <div class="tl-month-label">Tháng 8</div>
+          <div class="tl-card">
+            <div class="tl-card-icon">🔥</div>
+            <div class="tl-card-name">Phòng cháy chữa cháy</div>
+            <div class="tl-card-person">Đoàn Minh Quốc<br>(074273) – P.CĐ</div>
+            <div class="tl-card-hours">8 giờ</div>
+          </div>
+        </div>
+        <div class="tl-month">
+          <div class="tl-dot"></div>
+          <div class="tl-month-label">Tháng 9</div>
+          <div class="tl-card">
+            <div class="tl-card-icon">🤖</div>
+            <div class="tl-card-name">Công nghệ mới</div>
+            <div class="tl-card-person">Phạm Quốc Dũng<br>(014191) – P.CĐ</div>
+            <div class="tl-card-hours">8 giờ</div>
+          </div>
+        </div>
+        <div class="tl-month">
+          <div class="tl-dot"></div>
+          <div class="tl-month-label">Tháng 10</div>
+          <div class="tl-card">
+            <div class="tl-card-icon">🔌</div>
+            <div class="tl-card-name">Tủ nguồn DC</div>
+            <div class="tl-card-person">Lê Minh Phương<br>(011054) – P.CĐ</div>
+            <div class="tl-card-hours">8 giờ</div>
+          </div>
+        </div>
+        <div class="tl-month">
+          <div class="tl-dot"></div>
+          <div class="tl-month-label">Tháng 11</div>
+          <div class="tl-card">
+            <div class="tl-card-icon">☀️</div>
+            <div class="tl-card-name">Pin mặt trời</div>
+            <div class="tl-card-person">Trần Nguyễn Chí Bảo<br>(439122) – P.CĐ</div>
+            <div class="tl-card-hours">8 giờ</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="timeline-total">
+      <div class="tl-total-item">
+        <div class="tl-total-num"><span>6</span></div>
+        <div class="tl-total-label">Chủ đề</div>
+      </div>
+      <div class="tl-total-item">
+        <div class="tl-total-num"><span>48</span></div>
+        <div class="tl-total-label">Giờ đào tạo</div>
+      </div>
+      <div class="tl-total-item">
+        <div class="tl-total-num"><span>6</span></div>
+        <div class="tl-total-label">Tháng (T6–T11)</div>
+      </div>
+      <div class="tl-total-item">
+        <div class="tl-total-num"><span>15</span></div>
+        <div class="tl-total-label">Học viên</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ASSESSMENT SECTION -->
+<section class="assessment">
+  <div class="section-inner">
+    <div class="section-tag">Đánh giá</div>
+    <h2 class="section-title">Kiểm Tra &amp;<br><span class="red">Đánh Giá Kết Quả</span></h2>
+    <div class="assessment-grid">
+      <div style="display:flex; flex-direction:column; gap:20px;">
+        <div class="assess-card">
+          <div class="assess-card-title">
+            <div class="assess-icon">📋</div>
+            Yêu cầu đầu ra
+          </div>
+          <div class="assess-item">
+            <div class="assess-dot"></div>
+            <div class="assess-text">CBNV tham gia đào tạo đầy đủ theo lịch đã phân công</div>
+          </div>
+          <div class="assess-item">
+            <div class="assess-dot"></div>
+            <div class="assess-text">Hoàn thành bài kiểm tra sau khi kết thúc lớp học</div>
+          </div>
+        </div>
+        <div class="assess-card">
+          <div class="assess-card-title">
+            <div class="assess-icon">⏱️</div>
+            Hình thức đánh giá
+          </div>
+          <div class="assess-item">
+            <div class="assess-dot"></div>
+            <div class="assess-text">Kết cấu đề thi: <strong>20 câu hỏi trắc nghiệm</strong></div>
+          </div>
+          <div class="assess-item">
+            <div class="assess-dot"></div>
+            <div class="assess-text">Thời gian: <strong>20 phút / bài thi</strong></div>
+          </div>
+        </div>
+      </div>
+      <div class="assess-card">
+        <div class="assess-card-title" style="margin-bottom:24px;">
+          <div class="assess-icon">📊</div>
+          Thang điểm &amp; kết quả
+        </div>
+        <div class="score-cards">
+          <div class="score-card pass">
+            <div class="score-mark">✅</div>
+            <div>
+              <div class="score-label">Đạt yêu cầu — Điểm &gt; 7/10</div>
+              <div class="score-desc">Hoàn thành nội dung đào tạo.</div>
+            </div>
+          </div>
+          <div class="score-card fail">
+            <div class="score-mark">❌</div>
+            <div>
+              <div class="score-label">Không đạt — Điểm &lt; 7/10</div>
+              <div class="score-desc">Đơn vị đánh giá vào kết quả hoàn thành nhiệm vụ của cá nhân trong quý.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ORGANIZATION SECTION -->
+<section class="org-section">
+  <div class="section-inner">
+    <div class="section-tag">Tổ chức</div>
+    <h2 class="section-title">Tổ Chức<br><span class="red">Thực Hiện</span></h2>
+    <div class="org-grid">
+      <div class="org-main-card">
+        <div class="org-main-title">⚙️ Phòng cơ điện chủ trì thực hiện</div>
+        <div class="org-check">
+          <div class="check-icon">✓</div>
+          <div class="org-check-text">Xây dựng chi tiết kế hoạch và chuẩn bị đầy đủ tài liệu đào tạo nội bộ</div>
+        </div>
+        <div class="org-check">
+          <div class="check-icon">✓</div>
+          <div class="org-check-text">Lập danh sách nhân sự tham gia đào tạo theo kế hoạch đã được phê duyệt</div>
+        </div>
+        <div class="org-check">
+          <div class="check-icon">✓</div>
+          <div class="org-check-text">Triển khai đào tạo theo kế hoạch đã xây dựng</div>
+        </div>
+        <div class="org-check">
+          <div class="check-icon">✓</div>
+          <div class="org-check-text">Xây dựng ngân hàng câu hỏi phục vụ cho các bài kiểm tra</div>
+        </div>
+        <div class="org-check">
+          <div class="check-icon">✓</div>
+          <div class="org-check-text">Đánh giá kết quả sau đào tạo</div>
+        </div>
+      </div>
+      <div class="org-side">
+        <div class="org-side-card">
+          <div class="org-side-title">⚖️ Căn cứ pháp lý</div>
+          <div class="org-side-item">Kế hoạch số 100/KH-CĐ phê duyệt ngày 01/4/2025 – kế hoạch SXKD và xây dựng đơn vị năm 2025</div>
+          <div class="org-side-item">Tình hình thực tế tại Phòng Cơ điện</div>
+        </div>
+        <div class="org-side-card">
+          <div class="org-side-title">📤 Phân phối báo cáo</div>
+          <div class="org-side-item">BGĐ TTKTKV3 (để báo cáo)</div>
+          <div class="org-side-item">Phòng Tổng hợp (để báo cáo)</div>
+          <div class="org-side-item">Toàn bộ CBNV Phòng Cơ điện (để thực hiện)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+  <div class="cta-glow"></div>
+  <div class="cta-inner">
+    <div class="cta-tag">Phòng Cơ Điện · TTKTKV3 · 2025</div>
+    <div class="cta-title">Cùng Nhau<br><span>Nâng Cao</span><br>Năng Lực</div>
+    <p class="cta-sub">
+      Đây là chương trình đào tạo nội bộ nhằm củng cố kiến thức chuyên môn và nâng cao năng lực vận hành khai thác cơ điện cho toàn bộ nhân sự Phòng Cơ điện.
+    </p>
+    <a href="#" class="cta-btn">Xem chi tiết chương trình</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-left">
+    <strong>Viettel Networks · Phòng Cơ Điện · TTKTKV3</strong><br>
+    Kế hoạch đào tạo nội bộ – Nhân sự cơ điện – Năm 2025<br>
+    Phê duyệt: Phó Giám đốc TTKTKV3
+  </div>
+  <div class="footer-right">
+    <div class="footer-badge">Tài liệu nội bộ</div>
+    <div class="footer-badge">© 2025</div>
+  </div>
+</footer>
+
+</body>
+</html>
